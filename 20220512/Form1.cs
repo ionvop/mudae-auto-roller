@@ -75,6 +75,11 @@ namespace _20220512 {
                     }
 
                     if (IsKeyPressed(32)) {
+                        for (int i = 0; i < 10; i++) {
+                            objSim.Keyboard.KeyPress(VirtualKeyCode.BACK);
+                            Thread.Sleep(25);
+                        }
+
                         objSim.Keyboard.TextEntry(txtSpaceEvent.Text.Substring(0, txtSpaceEvent.TextLength - 1));
                         Thread.Sleep(100);
                         objSim.Keyboard.TextEntry(txtSpaceEvent.Text.Substring(txtSpaceEvent.TextLength - 1));
